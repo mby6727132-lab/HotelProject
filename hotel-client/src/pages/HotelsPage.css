@@ -1,0 +1,168 @@
+.deals-band {
+  background: linear-gradient(135deg, #fdf3e2 0%, var(--color-bg) 70%);
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.deals-band__title {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.deals-band__scroller {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.deals-band__scroller > * {
+  flex: 0 0 300px;
+}
+
+.deals-band__skeleton {
+  flex: 0 0 300px;
+  height: 340px;
+  border-radius: var(--radius-md);
+}
+
+/* 1. Compact header / intro - no longer a tall hero, so the search bar
+   below it is reachable without scrolling. */
+.page-header {
+  background: var(--color-surface);
+  padding: 32px 0 20px;
+  text-align: center;
+}
+
+.page-header__eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-burgundy);
+  margin-bottom: 8px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* 2. Search bar - prominent, directly below the header, above the results */
+.search-section {
+  background: radial-gradient(circle at 15% 15%, var(--color-navy-light) 0%, var(--color-navy) 42%, var(--color-burgundy-dark) 125%);
+  padding: 28px 0 32px;
+}
+
+.search-form {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.search-form__row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-end;
+}
+
+.search-form__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.search-form__field--narrow {
+  flex: 0 0 90px;
+}
+
+.search-form__field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.search-form__field input {
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.search-form__field input:focus {
+  outline: none;
+  border-color: var(--color-burgundy);
+  box-shadow: 0 0 0 3px rgba(110, 30, 58, 0.12);
+}
+
+.search-form__submit {
+  padding: 13px 28px;
+}
+
+.hero__quick-cities {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__quick-city {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.hero__quick-city:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.results-heading {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 620px) {
+  .page-header {
+    padding: 24px 0 16px;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-form__row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form__field--narrow {
+    flex: 1;
+  }
+}

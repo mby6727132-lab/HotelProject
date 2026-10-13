@@ -1,0 +1,118 @@
+.hotel-card {
+  overflow: hidden;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.hotel-card__image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg);
+}
+
+.hotel-card__image-art {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hotel-card__city-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.hotel-card__stock-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(10, 22, 38, 0.65);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.hotel-card__body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.hotel-card__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hotel-card__name {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.hotel-card__address {
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.hotel-card__style {
+  align-self: flex-start;
+  margin: 2px 0;
+}
+
+.hotel-card__description {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  margin: 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hotel-card__amenities {
+  list-style: none;
+  margin: 2px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hotel-card__amenities li {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.74rem;
+  color: var(--color-text-muted);
+}
+
+.hotel-card__amenities-more {
+  font-weight: 600;
+  color: var(--color-burgundy) !important;
+}
+
+.hotel-card__audience {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 2px 0 10px;
+}
+
+.hotel-card__cta {
+  margin-top: auto;
+}

@@ -1,0 +1,138 @@
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.image-gallery--compact .image-gallery__viewport {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-sm);
+}
+
+.image-gallery__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  animation: fadeIn 0.2s ease;
+}
+
+.image-gallery__stock-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(10, 22, 38, 0.65);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.image-gallery__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10, 22, 38, 0.55);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+
+.image-gallery__arrow:hover {
+  background: rgba(10, 22, 38, 0.8);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.image-gallery__arrow:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.image-gallery__arrow--left {
+  left: 10px;
+}
+
+.image-gallery__arrow--right {
+  right: 10px;
+}
+
+.image-gallery--compact .image-gallery__arrow {
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+}
+
+.image-gallery__counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(10, 22, 38, 0.6);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.image-gallery__dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.image-gallery__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+
+.image-gallery__dot.is-active {
+  background: var(--color-burgundy);
+  transform: scale(1.25);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

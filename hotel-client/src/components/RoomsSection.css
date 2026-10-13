@@ -1,0 +1,30 @@
+.rooms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.date-form {
+  display: flex;
+  gap: 18px;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.date-form .field {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 620px) {
+  .date-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
